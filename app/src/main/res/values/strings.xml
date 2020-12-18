@@ -5,4 +5,8 @@
     <string name="correo">Correo</string>
     <string name="clave">Clave</string>
     <string name="crearcuenta">Crear Cuenta</string>
+    <string name="tituloActivity2">DATOS USUARIO</string>
+    <string name="EmptyActivity2">Sin datos</string>
+    <string name="btnRegresar">VOLVER</string>
+    <string name="btnNuevo">Nuevo usuario</string>
 </resources>
