@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".MainActivity">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="104dp"
@@ -15,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/saitama"/>
+        app:srcCompat="@drawable/saitama" />
 
     <EditText
         android:id="@+id/textView"
@@ -76,12 +77,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/gris"
         android:text="@string/crearcuenta"
         android:textColor="@color/black"
-        android:backgroundTint="@color/gris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.754"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.tareaformulario.MainFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
