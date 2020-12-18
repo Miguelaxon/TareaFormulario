@@ -34,16 +34,6 @@ public class ShowActivity extends AppCompatActivity {
         e2Binding.tvApellido.setText("Su Apellido es: " + apellido);
         e2Binding.tvCorreo.setText("Su Correo es: " + correo);
 
-        e2Binding.btnRegresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent volver = new Intent(Intent.ACTION_VIEW);
-                String url = "ShowActivity.class";
-                volver.setData(Uri.parse(url));
-                startActivity(volver);
-            }
-        });
-
         e2Binding.btnNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
