@@ -14,4 +14,6 @@
     <string name="opcion2">NO</string>
     <string name="fragmento2">Fragmento en el Show</string>
     <string name="fragmento_01">Conoces este personaje?</string>
+    <string name="abrir">Abrir</string>
+    <string name="cerrar">Cerrar</string>
 </resources>

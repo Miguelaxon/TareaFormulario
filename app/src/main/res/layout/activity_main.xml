@@ -76,7 +76,7 @@
         android:id="@+id/btnCrearCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:backgroundTint="@color/gris"
         android:text="@string/crearcuenta"
         android:textColor="@color/black"
@@ -86,7 +86,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragment01"
         android:name="com.example.tareaformulario.MainFragment"
         android:layout_width="wrap_content"
@@ -105,5 +105,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFragment"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/abrir"
+        app:layout_constraintEnd_toStartOf="@+id/btnCrearCuenta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

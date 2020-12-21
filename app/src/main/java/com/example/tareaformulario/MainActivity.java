@@ -1,6 +1,8 @@
 package com.example.tareaformulario;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,4 +66,14 @@ public class MainActivity extends AppCompatActivity {
         cambio.putExtra("data",eBundle);
         startActivity(cambio);
     }
+
+    private void showFragment(){
+        MainFragment mainFragmento = MainFragment.newInstance();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment,mainFragmento).addToBackStack(null).commit();
+        eBinding.buttonFragment.setText(R.string.cerrar);
+        //isFragmentDisplayed = true;
+    }
+
 }

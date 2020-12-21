@@ -6,33 +6,31 @@
     android:orientation="horizontal"
     tools:context=".MainFragment02">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="28dp"
-        android:autoSizeTextType="uniform"
-        android:layout_weight="1"
-        android:text="@string/fragmento_01" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup01"
-        android:autoSizeTextType="uniform"
-        android:layout_width="match_parent"
-        android:layout_weight="2"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/radioButton00"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/opcion1" />
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/fragmento_01"
+            android:textSize="24dp" />
 
-        <RadioButton
-            android:id="@+id/radioButton01"
+        <RadioGroup
+            android:id="@+id/radioGroup01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/opcion2" />
-    </RadioGroup>
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
+            <RadioButton
+                android:id="@+id/radioButton00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opcion1" />
+
+            <RadioButton
+                android:id="@+id/radioButton01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opcion2" />
+        </RadioGroup>
 </LinearLayout>

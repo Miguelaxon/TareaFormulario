@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +13,7 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.tareaformulario.databinding.ActivityMainBinding;
 import com.example.tareaformulario.databinding.FragmentMain02Binding;
-import com.example.tareaformulario.databinding.FragmentMainBinding;
 
 public class MainFragment02 extends Fragment {
     private FragmentMain02Binding eBinding;
@@ -58,9 +57,12 @@ public class MainFragment02 extends Fragment {
         });
     }
 
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         eBinding = null;
     }
+
+
 }

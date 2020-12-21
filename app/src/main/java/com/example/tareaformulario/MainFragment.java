@@ -59,6 +59,11 @@ public class MainFragment extends Fragment {
         });
     }
 
+    public static MainFragment newInstance(){
+        MainFragment fragmento = new MainFragment();
+        return fragmento;
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
