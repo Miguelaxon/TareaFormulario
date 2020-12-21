@@ -9,8 +9,9 @@
     <string name="EmptyActivity2">Sin datos</string>
     <string name="btnRegresar">VOLVER</string>
     <string name="btnNuevo">Nuevo usuario</string>
-    <string name="fragmento">Fragmento en el Main</string>
+    <string name="fragmento">Saludos humano</string>
+    <string name="opcion1">SI</string>
+    <string name="opcion2">NO</string>
     <string name="fragmento2">Fragmento en el Show</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmento_01">Conoces este personaje?</string>
 </resources>

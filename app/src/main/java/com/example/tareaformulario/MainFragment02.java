@@ -6,51 +6,50 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.tareaformulario.databinding.ActivityMainBinding;
+import com.example.tareaformulario.databinding.FragmentMain02Binding;
 import com.example.tareaformulario.databinding.FragmentMainBinding;
 
-import java.text.Bidi;
+public class MainFragment02 extends Fragment {
+    private FragmentMain02Binding eBinding;
+    private String eLog = MainFragment02.class.getSimpleName();
 
-public class MainFragment extends Fragment {
-    private FragmentMainBinding eBiding;
-
-    public MainFragment() {
+    public MainFragment02() {
         // Required empty public constructor
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        eBiding = FragmentMainBinding.inflate(inflater, container, false);
-        return eBiding.getRoot();
+        eBinding = FragmentMain02Binding.inflate(inflater, container, false);
+        return eBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        eBiding.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        eBinding.radioGroup01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                int index = eBiding.radioGroup.indexOfChild(eBiding.radioGroup.findViewById(checkedId));
-
+                int index = eBinding.radioGroup01.indexOfChild
+                        (eBinding.radioGroup01.findViewById(checkedId));
                 switch (index){
                     case 0:
-                        eBiding.tvFragmewnt.setText("Hola Mundo");
+                        Toast.makeText(getContext(), "Otaku" ,Toast.LENGTH_LONG).show();
                         break;
                     case 1:
-                        eBiding.tvFragmewnt.setText("Adios Mundo");
+                        Toast.makeText(getContext(), "Eliminado!", Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;
@@ -62,6 +61,6 @@ public class MainFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        eBiding = null;
+        eBinding = null;
     }
 }
