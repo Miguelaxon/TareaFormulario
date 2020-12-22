@@ -10,7 +10,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoSizeTextType="uniform"
             android:text="@string/fragmento_01"
             android:textSize="24dp" />
 

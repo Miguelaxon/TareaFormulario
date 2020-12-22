@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding eBinding;
     private String nombre, apellido, correo, clave;
     private Cuenta ingreso = new Cuenta();
+    private boolean isFragmentDisplayed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        eBinding.buttonFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isFragmentDisplayed){
+                    showFragment();
+                } else {
+                    closeFragment();
+                }
+            }
+        });
     }
 
     public void onIntents(Cuenta objCuenta){
@@ -71,9 +83,20 @@ public class MainActivity extends AppCompatActivity {
         MainFragment mainFragmento = MainFragment.newInstance();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment,mainFragmento).addToBackStack(null).commit();
+        fragmentTransaction.add(R.id.fragment01,mainFragmento).addToBackStack(null).commit();
         eBinding.buttonFragment.setText(R.string.cerrar);
-        //isFragmentDisplayed = true;
+        isFragmentDisplayed = true;
     }
 
+    private void closeFragment() {
+        // Generamos la instancia del fragment manager
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        MainFragment mainFragmento = (MainFragment) fragmentManager.findFragmentById(R.id.fragment01);
+        if (mainFragmento != null){
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.remove(mainFragmento).commit();
+        }
+        eBinding.buttonFragment.setText(R.string.abrir);
+        isFragmentDisplayed = false;
+    }
 }
